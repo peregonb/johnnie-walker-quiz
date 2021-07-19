@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './scss/App.scss';
+import {Route} from 'react-router-dom';
+import {AgeScreen} from "./screens/AgeScreen";
+import {StartScreen} from "./screens/StartScreen";
+import {QuizScreen} from "./screens/QuizScreen";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="jwQuiz">
+            <Route path={process.env.PUBLIC_URL + '/'} exact render={() => <AgeScreen/>}/>
+            <Route path={process.env.PUBLIC_URL + '/start'} render={() => <StartScreen/>}/>
+            <Route path={process.env.PUBLIC_URL + '/quiz'} render={() => <QuizScreen/>}/>
+
+            {/*<Route path={process.env.PUBLIC_URL + '/settings'} render={() => <Settings/>}/>*/}
+        </div>
+    );
 }
 
 export default App;

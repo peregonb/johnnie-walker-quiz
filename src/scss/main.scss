@@ -1,0 +1,193 @@
+$root: jwQuiz;
+
+.#{$root} {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 1600px;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: content-box;
+
+  &-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &-question {
+    background-color: $yellow;
+    height: 900px;
+    width: 1600px;
+    position: relative;
+
+    &.with-walker {
+      background-image: url("//s7.vcdn.biz/static/118504851/walker.png");
+      background-size: 416.667px 395.775px;
+      background-repeat: no-repeat;
+      background-position: 1115.833px 37.125px;
+    }
+
+    &-excerpt {
+
+    }
+
+    &-number {
+      font-family: $JW;
+      font-weight: 400;
+      font-size: 91.667px;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      height: 110.833px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 187.5px;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 5px);
+        height: 4.5px;
+        background-color: #000;
+        bottom: 10px;
+      }
+    }
+
+    &-title {
+      font-family: $JW;
+      font-weight: 400;
+      font-size: 47.5px;
+      line-height: 47.5px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      position: absolute;
+      bottom: 425px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &-buttons {
+      display: flex;
+      position: absolute;
+      bottom: 244.167px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      a {
+        &:first-child {
+          margin-right: 47.5px;
+        }
+      }
+    }
+  }
+
+  &-start {
+    background-color: $yellow;
+    height: 900px;
+    width: 1600px;
+    position: relative;
+
+    &-img {
+      width: 791.067px;
+      height: 318.333px;
+      position: absolute;
+      left: 230.833px;
+      top: 70px;
+    }
+
+    &-title {
+      width: 802.5px;
+      left: 135px;
+      font-family: $JW;
+      font-weight: 400;
+      font-size: 47.5px;
+      line-height: 47.5px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      position: absolute;
+      bottom: 354.167px;
+    }
+
+    &-buttons {
+      display: flex;
+      position: absolute;
+      bottom: 152.5px;
+      left: 100px;
+
+      a {
+        &:first-child {
+          margin-right: 47.5px;
+        }
+      }
+    }
+
+    &-gifts {
+      position: absolute;
+      width: 410.275px;
+      height: 504.167px;
+      left: 1112.5px;
+      top: 243.333px;
+    }
+
+    &-bottom {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 93.333px;
+      background-color: #fff;
+      width: 100%;
+      font-family: $AA;
+      font-weight: 400;
+      font-size: 83.333px;
+      line-height: 93.333px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #000000;
+      padding-top: 23px;
+    }
+  }
+
+  &-link {
+    width: 416.667px;
+    height: 118.333px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $JW;
+    font-size: 45px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: black !important;
+    cursor: pointer;
+    border: 5px solid black;
+    box-sizing: border-box;
+    background-color: transparent;
+    transition: color $t, background-color $t;
+
+    &:hover {
+      background-color: black;
+      color: $yellow !important;
+      transition: color $t, background-color $t;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+//mixins
+@mixin r($point) {
+  @media (max-width: $point + px) {
+    @content;
+  }
+}
+
+@mixin h($point) {
+  @media (max-height: $point + px) {
+    @content;
+  }
+}
+
+@mixin rm($point) {
+  @media (min-width: $point + px) {
+    @content;
+  }
+}
+
+@mixin pseudo {
+  content: '';
+  position: absolute;
+}
+
+//vars
+$t: .3s;
+
+$red: #eb3d3d;
+$yellow: #ece123;
+
+
+$TTNorms: 'TTNorms-Pro';
+$PF: 'PFDinDisplayPro';
+$G: 'GothamPro';
+$JW: 'JohnnieWalkerCY-Headline';
+$AA: 'AAHigherup';
+
+$s: '/ 6 * 5';
