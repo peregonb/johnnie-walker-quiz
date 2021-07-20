@@ -3,7 +3,7 @@ import {Slide} from "../components/Slide";
 export const AgeScreen = () => {
 
     return (
-        <Slide title="Вам уже виповнилося 18 років?"
+        <Slide className="without-walker" title="Вам уже виповнилося 18 років?"
                buttons={[
                    {
                        text: "Так",

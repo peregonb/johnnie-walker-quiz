@@ -21,21 +21,56 @@ $root: jwQuiz;
     position: relative;
   }
 
-  &-question {
-    background-color: $yellow;
+  &-question,
+  &-form {
     height: 900px;
     width: 1600px;
     position: relative;
+    background-image: url("//s7.vcdn.biz/static/118504851/walker.png");
+    background-size: 416.667px 395.775px;
+    background-repeat: no-repeat;
+    background-position: 1115.833px 37.125px;
+    background-color: $yellow;
+  }
 
-    &.with-walker {
-      background-image: url("//s7.vcdn.biz/static/118504851/walker.png");
-      background-size: 416.667px 395.775px;
-      background-repeat: no-repeat;
-      background-position: 1115.833px 37.125px;
+  &-question {
+
+    &.without-walker {
+      background-image: none;
     }
 
-    &-excerpt {
 
+    &.is-error {
+      background-color: #fff;
+
+      .jwQuiz-question-number,
+      .jwQuiz-question-title {
+        color: $red;
+      }
+
+      .jwQuiz-question-number {
+        &:before {
+          background-color: $red;
+        }
+      }
+
+      .jwQuiz-link {
+        color: $red !important;
+        border: 5px solid $red;
+
+        &:hover {
+          background-color: $red;
+          color: #ffffff !important;
+        }
+      }
+
+      .jwQuiz-question-excerpt {
+        display: none;
+      }
+    }
+
+    &:not(.is-error) {
+      background-color: $yellow;
     }
 
     &-number {
@@ -55,7 +90,7 @@ $root: jwQuiz;
       transform: translateX(-50%);
       top: 187.5px;
 
-      &:before{
+      &:before {
         content: '';
         position: absolute;
         left: 50%;
@@ -79,6 +114,23 @@ $root: jwQuiz;
       bottom: 425px;
       left: 50%;
       transform: translateX(-50%);
+      max-width: 1184px;
+      width: 100%;
+      letter-spacing: -0.35px;
+    }
+
+    &-excerpt {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 85px;
+      font-family: $JW;
+      font-weight: 400;
+      font-size: 33.333px;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
     }
 
     &-buttons {
@@ -164,21 +216,107 @@ $root: jwQuiz;
       text-transform: uppercase;
       color: #000000;
       padding-top: 23px;
+      overflow: hidden;
+    }
+  }
+
+  &-form {
+    background-position: 1145px 8px;
+
+    &-image {
+      position: absolute;
+      width: 868.108px;
+      height: 178.308px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 203.333px;
+    }
+
+    &-title {
+      font-family: $JW;
+      font-weight: 400;
+      font-size: 47.5px;
+      line-height: 47.5px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      position: absolute;
+      bottom: 402.5px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 1184px;
+      width: 100%;
+      letter-spacing: -0.35px;
+    }
+
+    &-wrapper {
+      width: 1337.5px;
+      position: absolute;
+      left: 50%;
+      top: 537.5px;
+      transform: translateX(-50%);
+    }
+
+    &-inputs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-submit {
+      margin: 77.5px auto 0 auto;
+    }
+  }
+
+  &-input {
+    width: 391.667px;
+    height: 75px;
+    border: 5px solid #000000;
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 0 36.667px;
+    font-family: $JW;
+    font-weight: 400;
+    font-size: 37.5px;
+    line-height: 37.5px;
+    color: #000000;
+
+    &.in-focus {
+      &::placeholder {
+        opacity: 0;
+        transition: opacity $t / 3 * 2;
+      }
+    }
+
+    &::placeholder {
+      font-family: $JW;
+      font-weight: 400;
+      font-size: 37.5px;
+      line-height: 37.5px;
+      text-transform: uppercase;
+      color: #000000;
+      display: flex;
+      padding-top: 10px;
+      opacity: 1;
+      transition: opacity $t / 3 * 2;
     }
   }
 
   &-link {
     width: 416.667px;
     height: 118.333px;
+    user-select: none;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: $JW;
-    font-size: 45px;
-    line-height: 45px;
+    font-size: 37.5px;
+    line-height: 37.5px;
     text-transform: uppercase;
     color: black !important;
     cursor: pointer;
+    text-align: center;
     border: 5px solid black;
     box-sizing: border-box;
     background-color: transparent;
@@ -190,4 +328,8 @@ $root: jwQuiz;
       transition: color $t, background-color $t;
     }
   }
+}
+
+#hidden_iframe {
+  display: none !important;
 }

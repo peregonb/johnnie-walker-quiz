@@ -4,8 +4,8 @@ export const StartScreen = () => {
 
     return (
         <div className="jwQuiz-start">
-            <img src="//s1.vcdn.biz/static/118486791/man.png" className="jwQuiz-start-img"/>
-            <img src="//s9.vcdn.biz/static/118490831/gifts.png" className="jwQuiz-start-gifts"/>
+            <img alt="" src="//s1.vcdn.biz/static/118486791/man.png" className="jwQuiz-start-img"/>
+            <img alt="" src="//s9.vcdn.biz/static/118490831/gifts.png" className="jwQuiz-start-gifts"/>
             <div className="jwQuiz-start-title">
                 Дивись уважно фільм, проходь тест <br/>
                 та вигравай подарунок від Johnnie Walker
@@ -15,7 +15,7 @@ export const StartScreen = () => {
                         target="_blank">
                     Дивитись фільм
                 </Button>
-                <Button type="action" link={"/quiz"} isError={true}>
+                <Button type="action" link="/quiz" isError={true} kibanaMessage="buttonClick_start_jw">
                     Почати тест
                 </Button>
             </div>
