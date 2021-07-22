@@ -1,6 +1,6 @@
-export const Checkbox = ({name, className = '', value, setValue}) => {
+export const Checkbox = ({name, className = '', value, setValue, isError}) => {
     return (
-        <div className={`jwQuiz-checkbox ${className}`}>
+        <div className={`jwQuiz-checkbox ${className}${isError ? ' is-error' : ''}`}>
             <input value={value ? 'Да': 'Нет'}
                    checked={value}
                    onChange={() => setValue(val => !val)}

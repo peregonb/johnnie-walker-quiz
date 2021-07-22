@@ -1,6 +1,14 @@
 import {NavLink} from "react-router-dom";
 
-export const Button = ({children, type = 'general', link = '#', target = '_self', kibanaMessage, onClick, className=''}) => {
+export const Button = ({
+                           children,
+                           type = 'general',
+                           link = '#',
+                           target = '_self',
+                           kibanaMessage,
+                           onClick,
+                           className = ''
+                       }) => {
     const attr = {
         href: type !== 'action' ? link : undefined,
         to: type === 'action' ? link : undefined,
