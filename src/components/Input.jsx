@@ -4,7 +4,7 @@ export const Input = ({placeholder, name, value, setValue, isError = false}) => 
     const [focused, setFocused] = useState(false);
 
     return (
-        <input className={`jwQuiz-input${focused ? ' in-focus': ''}${isError && !focused && !value.trim().length ? ' is-error': ''}`}
+        <input className={`jwQuiz-input${focused ? ' in-focus': ''}${isError && !focused ? ' is-error': ''}`}
                name={name}
                value={value}
                onChange={e => setValue(e.target.value)}
