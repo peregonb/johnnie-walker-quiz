@@ -4,33 +4,49 @@ $root: jwQuiz;
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-width: 1600px;
+  min-width: 1600 * $d;
   position: relative;
   overflow-x: hidden;
   box-sizing: content-box;
 
+  @include rm(1600) {
+    min-width: 1600px;
+  }
+
   &-wrapper {
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
-    max-width: 1600px;
+    padding: 0 20 * $d;
+    max-width: 1600 * $d;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
+
+    @include rm(1600) {
+      padding: 0 20px;
+      max-width: 1600px;
+    }
   }
 
   &-question,
   &-form {
-    height: 900px;
-    width: 1600px;
+    height: 900 * $d;
+    width: 1600 * $d;
     position: relative;
     background-image: url("//s7.vcdn.biz/static/118504851/walker.png");
-    background-size: 416.667px 395.775px;
+    background-size: 416.667 * $d 395.775 * $d;
     background-repeat: no-repeat;
-    background-position: 1115.833px 37.125px;
+    background-position: 1115.833 * $d 37.125 * $d;
     background-color: $yellow;
+
+    @include rm(1600) {
+      height: 900px;
+      width: 1600px;
+      background-size: 416.667px 395.775px;
+      background-position: 1115.833px 37.125px;
+    }
   }
 
   &-question {
@@ -56,7 +72,11 @@ $root: jwQuiz;
 
       .jwQuiz-link {
         color: $red !important;
-        border: 5px solid $red;
+        border: 5 * $d solid $red;
+
+        @include rm(1600) {
+          border: 5px solid $red;
+        }
 
         &:hover {
           background-color: $red;
@@ -76,73 +96,106 @@ $root: jwQuiz;
     &-number {
       font-family: $JW;
       font-weight: 400;
-      font-size: 91.667px;
+      font-size: 91.667 * $d;
       line-height: 1;
       text-align: center;
       text-transform: uppercase;
       color: #000000;
-      height: 110.833px;
+      height: 110.833 * $d;
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 187.5px;
+      top: 187.5 * $d;
+
+      @include rm(1600) {
+        font-size: 91.667px;
+        height: 110.833px;
+        top: 187.5px;
+      }
 
       &:before {
         content: '';
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        width: calc(100% - 5px);
-        height: 4.5px;
+        width: calc(100% - 0.3125vw);
+        height: 4.5 * $d;
         background-color: #000;
-        bottom: 10px;
+        bottom: 10 * $d;
+
+        @include rm(1600) {
+          width: calc(100% - 5px);
+          height: 4.5px;
+          bottom: 10px;
+        }
       }
     }
 
     &-title {
       font-family: $JW;
       font-weight: 400;
-      font-size: 47.5px;
-      line-height: 47.5px;
+      font-size: 47.5 * $d;
+      line-height: 47.5 * $d;
       text-align: center;
       text-transform: uppercase;
       color: #000000;
       position: absolute;
-      bottom: 425px;
+      bottom: 425 * $d;
       left: 50%;
       transform: translateX(-50%);
-      max-width: 1184px;
+      max-width: 1184 * $d;
       width: 100%;
-      letter-spacing: -0.35px;
+      letter-spacing: -0.35 * $d;
+
+      @include rm(1600) {
+        font-size: 47.5px;
+        line-height: 47.5px;
+        bottom: 425px;
+        max-width: 1184px;
+        letter-spacing: -0.35px;
+      }
     }
 
     &-excerpt {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 85px;
+      top: 85 * $d;
       font-family: $JW;
       font-weight: 400;
-      font-size: 33.333px;
+      font-size: 33.333 * $d;
       line-height: 1;
       text-align: center;
       text-transform: uppercase;
       color: #000000;
+
+      @include rm(1600) {
+        top: 85px;
+        font-size: 33.333px;
+      }
     }
 
     &-buttons {
       display: flex;
       position: absolute;
-      bottom: 244.167px;
+      bottom: 244.167 * $d;
       left: 50%;
       transform: translateX(-50%);
 
+      @include rm(1600) {
+        bottom: 244.167px;
+      }
+
       a {
         &:first-child {
-          margin-right: 47.5px;
+          margin-right: 47.5 * $d;
+
+          @include rm(1600) {
+            margin-right: 47.5px;
+          }
         }
       }
     }
@@ -150,111 +203,180 @@ $root: jwQuiz;
 
   &-start {
     background-color: $yellow;
-    height: 900px;
-    width: 1600px;
+    height: 900 * $d;
+    width: 1600 * $d;
     position: relative;
 
+    @include rm(1600) {
+      height: 900px;
+      width: 1600px;
+    }
+
     &-img {
-      width: 791.067px;
-      height: 318.333px;
+      width: 791.067 * $d;
+      height: 318.333 * $d;
       position: absolute;
-      left: 230.833px;
-      top: 70px;
+      left: 230.833 * $d;
+      top: 70 * $d;
+
+      @include rm(1600) {
+        width: 791.067px;
+        height: 318.333px;
+        left: 230.833px;
+        top: 70px;
+      }
     }
 
     &-title {
-      width: 802.5px;
-      left: 135px;
+      width: 802.5 * $d;
+      left: 135 * $d;
       font-family: $JW;
       font-weight: 400;
-      font-size: 47.5px;
-      line-height: 47.5px;
+      font-size: 47.5 * $d;
+      line-height: 47.5 * $d;
       text-align: center;
       text-transform: uppercase;
       color: #000000;
       position: absolute;
-      bottom: 354.167px;
+      bottom: 354.167 * $d;
+
+      @include rm(1600) {
+        width: 802.5px;
+        left: 135px;
+        font-size: 47.5px;
+        line-height: 47.5px;
+        bottom: 354.167px;
+      }
     }
 
     &-buttons {
       display: flex;
       position: absolute;
-      bottom: 152.5px;
-      left: 100px;
+      bottom: 152.5 * $d;
+      left: 100 * $d;
+
+      @include rm(1600) {
+        bottom: 152.5px;
+        left: 100px;
+      }
 
       a {
         &:first-child {
-          margin-right: 47.5px;
+          margin-right: 47.5 * $d;
+
+          @include rm(1600) {
+            margin-right: 47.5px;
+          }
         }
       }
     }
 
     &-gifts {
       position: absolute;
-      width: 410.275px;
-      height: 504.167px;
-      left: 1112.5px;
-      top: 243.333px;
+      width: 410.275 * $d;
+      height: 504.167 * $d;
+      left: 1112.5 * $d;
+      top: 243.333 * $d;
+
+      @include rm(1600) {
+        width: 410.275px;
+        height: 504.167px;
+        left: 1112.5px;
+        top: 243.333px;
+      }
     }
 
     &-bottom {
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 93.333px;
+      height: 93.333 * $d;
       background-color: #fff;
       width: 100%;
       font-family: $AA;
       font-weight: 400;
-      font-size: 83.333px;
-      line-height: 93.333px;
+      font-size: 83.333 * $d;
+      line-height: 93.333 * $d;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      letter-spacing: 5px;
+      letter-spacing: 5 * $d;
       text-transform: uppercase;
       color: #000000;
-      padding-top: 23px;
+      padding-top: 23 * $d;
       overflow: hidden;
+
+      @include rm(1600) {
+        height: 93.333px;
+        font-size: 83.333px;
+        line-height: 93.333px;
+        letter-spacing: 5px;
+        padding-top: 23px;
+      }
     }
   }
 
   &-form {
-    background-position: 1145px 8px;
+    background-position: 1145 * $d 8 * $d;
+
+    @include rm(1600) {
+      background-position: 1145px 8px;
+    }
 
     &-image {
       position: absolute;
-      width: 868.108px;
-      height: 178.308px;
+      width: 868.108 * $d;
+      height: 178.308 * $d;
       left: 50%;
       transform: translateX(-50%);
-      top: 203.333px;
+      top: 203.333 * $d;
+
+
+      @include rm(1600) {
+        width: 868.108px;
+        height: 178.308px;
+        top: 203.333px;
+      }
     }
 
     &-title {
       font-family: $JW;
       font-weight: 400;
-      font-size: 47.5px;
-      line-height: 47.5px;
+      font-size: 47.5 * $d;
+      line-height: 47.5 * $d;
       text-align: center;
       text-transform: uppercase;
       color: #000000;
       position: absolute;
-      bottom: 402.5px;
+      bottom: 402.5 * $d;
       left: 50%;
       transform: translateX(-50%);
-      max-width: 1184px;
+      max-width: 1184 * $d;
       width: 100%;
-      letter-spacing: -0.35px;
+      letter-spacing: -0.35 * $d;
+
+
+      @include rm(1600) {
+        font-size: 47.5px;
+        line-height: 47.5px;
+        bottom: 402.5px;
+        max-width: 1184px;
+        letter-spacing: -0.35px;
+      }
     }
 
     &-wrapper {
-      width: 1337.5px;
+      width: 1337.5 * $d;
       position: absolute;
       left: 50%;
-      top: 537.5px;
+      top: 537.5 * $d;
       transform: translateX(-50%);
+
+      @include rm(1600) {
+        width: 1337.5px;
+        top: 537.5px;
+      }
     }
 
     &-inputs {
@@ -264,68 +386,288 @@ $root: jwQuiz;
     }
 
     &-submit {
-      margin: 77.5px auto 0 auto;
+      margin: 23.333 * $d auto 0 auto;
+
+      @include rm(1600) {
+        margin: 23.333px auto 0 auto;
+      }
+    }
+
+    &-or {
+      position: absolute;
+      left: 1022.5 * $d;
+      top: 569.167 * $d;
+      font-family: $JW;
+      font-weight: 400;
+      font-size: 25 * $d;
+      line-height: 25 * $d;
+      text-transform: uppercase;
+      color: #000000;
+
+      @include rm(1600) {
+        left: 1022.5px;
+        top: 569.167px;
+        font-size: 25px;
+        line-height: 25px;
+      }
+    }
+
+    &-checkbox {
+      margin-top: 20.833 * $d;
+
+      @include rm(1600) {
+        margin-top: 20.833px;
+      }
     }
   }
 
   &-input {
-    width: 391.667px;
-    height: 75px;
-    border: 5px solid #000000;
+    width: 391.667 * $d;
+    height: 75 * $d;
+    border: 5 * $d solid #000000;
     box-sizing: border-box;
     background-color: transparent;
-    padding: 0 36.667px;
-    font-family: $JW;
+    padding: 0 36.667 * $d;
+    font-family: $D;
     font-weight: 400;
-    font-size: 37.5px;
-    line-height: 37.5px;
+    font-size: 37.5 * $d;
+    line-height: 37.5 * $d;
     color: #000000;
+    transition: border-color $t;
+
+    @include rm(1600) {
+      width: 391.667px;
+      height: 75px;
+      border: 5px solid #000000;
+      padding: 0 36.667px;
+      font-size: 37.5px;
+      line-height: 37.5px;
+    }
+
+    &::selection {
+      background-color: black;
+      color: $yellow;
+    }
 
     &.in-focus {
       &::placeholder {
         opacity: 0;
-        transition: opacity $t / 3 * 2;
+        transition: opacity .2s;
       }
+    }
+
+    &.is-error {
+      border-color: $red;
+      transition: border-color $t;
     }
 
     &::placeholder {
       font-family: $JW;
       font-weight: 400;
-      font-size: 37.5px;
-      line-height: 37.5px;
+      font-size: 37.5 * $d;
+      line-height: 37.5 * $d;
       text-transform: uppercase;
-      color: #000000;
+      color: rgba(#000000, .1);
       display: flex;
-      padding-top: 10px;
+      padding-top: 10 * $d;
       opacity: 1;
-      transition: opacity $t / 3 * 2;
+      transition: opacity .2s;
+
+      @include rm(1600) {
+        font-size: 37.5px;
+        line-height: 37.5px;
+        padding-top: 10px;
+      }
     }
   }
 
   &-link {
-    width: 416.667px;
-    height: 118.333px;
+    width: 416.667 * $d;
+    height: 118.333 * $d;
     user-select: none;
-    padding: 0 20px;
+    padding: 0 20 * $d;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: $JW;
-    font-size: 37.5px;
-    line-height: 37.5px;
+    font-size: 37.5 * $d;
+    line-height: 37.5 * $d;
     text-transform: uppercase;
     color: black !important;
     cursor: pointer;
     text-align: center;
-    border: 5px solid black;
+    border: 5 * $d solid black;
     box-sizing: border-box;
     background-color: transparent;
     transition: color $t, background-color $t;
+
+    @include rm(1600) {
+      width: 416.667px;
+      height: 118.333px;
+      padding: 0 20px;
+      font-size: 37.5px;
+      line-height: 37.5px;
+      border: 5px solid black;
+    }
 
     &:hover {
       background-color: black;
       color: $yellow !important;
       transition: color $t, background-color $t;
+    }
+  }
+
+  &-checkbox {
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+
+    &.error {
+      label {
+        color: #FC363B;
+        transition: color $t;
+      }
+    }
+
+    label, a {
+      font-family: $JW;
+      font-weight: 400;
+      font-size: 16 * $d;
+      line-height: 15 * $d;
+      text-transform: uppercase;
+      color: #000000 !important;
+
+      @include rm(1600) {
+        font-size: 16px;
+        line-height: 15px;
+      }
+    }
+
+    a {
+      position: relative;
+      cursor: pointer;
+
+      &:last-of-type {
+        margin-left: 36 * $d;
+
+        @include rm(1600) {
+          margin-left: 36px;
+        }
+      }
+
+      &:hover {
+        &:before {
+          width: 0;
+          transition: width $t;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2 * $d;
+        background-color: black;
+        transition: width $t;
+
+        @include rm(1600) {
+          height: 2px;
+        }
+      }
+    }
+
+    input {
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer
+    }
+
+    label {
+      -webkit-tap-highlight-color: transparent;
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      user-select: none;
+      vertical-align: middle;
+      line-height: 20 * $d;
+      transition: background-color $t, border-color $t, color $t;
+
+      @include rm(1600) {
+        line-height: 20px;
+      }
+
+      &:before, &:after {
+        transform: translateY(-2 * $d);
+
+        @include rm(1600) {
+          transform: translateY(-2px);
+        }
+      }
+
+    }
+
+    label:hover {
+      transition: background-color $t, border-color $t
+    }
+
+    label:hover:before {
+      border-color: #111;
+      transition: background-color $t, border-color $t
+    }
+
+    label:before {
+      content: "";
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 2 * $d solid #000;
+      position: relative;
+      cursor: pointer;
+      width: 17.5 * $d;
+      height: 17.5 * $d;
+      display: flex;
+      margin-right: 15 * $d;
+      float: left;
+      transition: background-color $t, border-color $t;
+
+      @include rm(1600) {
+        border: 2px solid #000;
+        width: 17.5px;
+        height: 17.5px;
+        margin-right: 15px;
+      }
+    }
+
+    label:after {
+      content: "";
+      border-color: transparent;
+      transition: background-color $t, border-color $t
+    }
+
+    input:checked + label:after {
+      display: block;
+      position: absolute;
+      background-image: url(//s1.vcdn.biz/static/118818531/v.svg);
+      background-position-y: center;
+      background-position-x: 4 * $d;
+      height: 100%;
+      width: 22 * $d;
+      top: 0;
+      left: 0;
+      color: #fff;
+      transition: background-color 0.3s, border-color 0.3s;
+      background-repeat: no-repeat;
+      background-size: 12.5 * $d auto;
+
+      @include rm(1600) {
+        background-position-x: 4px;
+        width: 22px;
+        background-size: 12.5px auto;
+      }
     }
   }
 }
