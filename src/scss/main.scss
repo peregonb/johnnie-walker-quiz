@@ -335,7 +335,7 @@ $root: jwQuiz;
 
     &-image {
       position: absolute;
-      width: 868.108 * $d;
+      width: auto;
       height: 178.308 * $d;
       left: 50%;
       transform: translateX(-50%);
@@ -343,7 +343,7 @@ $root: jwQuiz;
 
 
       @include rm(1600) {
-        width: 868.108px;
+        width: auto;
         height: 178.308px;
         top: 203.333px;
       }

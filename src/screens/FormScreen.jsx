@@ -52,7 +52,7 @@ export const FormScreen = ({router}) => {
         <>
             <div className="jwQuiz-form">
                 <div className="jwQuiz-question-excerpt">Ура! А тепер готуйтеся отримати крутий подарунок.</div>
-                <img className="jwQuiz-form-image" src="//s4.vcdn.biz/static/118760871/gifts.png" alt=""/>
+                <img className="jwQuiz-form-image" src="//s3.vcdn.biz/static/122650931/gifts2.png" alt=""/>
                 <div className="jwQuiz-form-title">
                     Заповніть форму, щоб ми зв'язалися з вами
                 </div>
