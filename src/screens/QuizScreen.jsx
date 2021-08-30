@@ -321,7 +321,7 @@ const quizData = [
             buttons: [
                 {
                     text: "150",
-                    attr: {type: "slide", link: "q11"}
+                    attr: {type: "slide", link: "q11no"}
                 },
                 {
                     text: "201",

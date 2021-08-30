@@ -5,7 +5,7 @@ export const StartScreen = () => {
     return (
         <div className="jwQuiz-start">
             <img alt="" src="//s1.vcdn.biz/static/118486791/man.png" className="jwQuiz-start-img"/>
-            <img alt="" src="//s9.vcdn.biz/static/118490831/gifts.png" className="jwQuiz-start-gifts"/>
+            <img alt="" src="//s3.vcdn.biz/static/122604491/gifts.png" className="jwQuiz-start-gifts"/>
             <div className="jwQuiz-start-title">
                 Дивись уважно фільм, проходь тест <br/>
                 та вигравай подарунок від Johnnie Walker
@@ -15,7 +15,7 @@ export const StartScreen = () => {
                         target="_blank">
                     Дивитись фільм
                 </Button>
-                <Button type="action" link="/quiz" isError={true} kibanaMessage="buttonClick_start_jw">
+                <Button type="general" link="https://gdeua.hit.gemius.pl/lshitredir/id=mvMFkMeH7c0Zhs9148ttVn85LN6pq9.aMB0cUdp9HHD.17/fastid=artsjakhpvuuzfeigbfgqdchuuky/stparam=knjplnprsc/nc=0/gdpr=0/gdpr_consent=/url=https://megogo.net/ru/johnnie_walker_quiz#/quiz" isError={true} kibanaMessage="buttonClick_start_jw">
                     Почати тест
                 </Button>
             </div>
