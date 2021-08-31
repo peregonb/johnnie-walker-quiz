@@ -6,6 +6,7 @@ export const Button = ({
                            link = '#',
                            target = '_self',
                            kibanaMessage,
+                           gaMessage,
                            onClick,
                            className = ''
                        }) => {
@@ -14,6 +15,7 @@ export const Button = ({
         to: type === 'action' ? link : undefined,
         type: type === 'submit' ? type : undefined,
         "data-kibana_message": kibanaMessage,
+        "data-ga": gaMessage,
         onClick: type === 'slide' ? e => {
             e.preventDefault();
             onClick();

@@ -15,7 +15,7 @@ export const StartScreen = () => {
                         target="_blank">
                     Дивитись фільм
                 </Button>
-                <Button type="general" link="https://gdeua.hit.gemius.pl/lshitredir/id=mvMFkMeH7c0Zhs9148ttVn85LN6pq9.aMB0cUdp9HHD.17/fastid=artsjakhpvuuzfeigbfgqdchuuky/stparam=knjplnprsc/nc=0/gdpr=0/gdpr_consent=/url=https://megogo.net/ru/johnnie_walker_quiz#/quiz" isError={true} kibanaMessage="buttonClick_start_jw">
+                <Button type="action" link="/quiz" isError={true} kibanaMessage="buttonClick_start_jw" gaMessage="buttonClick_start_jw">
                     Почати тест
                 </Button>
             </div>
